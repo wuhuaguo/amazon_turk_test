@@ -1,0 +1,10 @@
+<!-- This is a django page so turk_submit_url is a variable I made in my view that got turkSubmitTo from the GET request. Also, the hidden user_id input gets updated with some javascript when the page loads and the task starts up. -->
+
+<h4>Thanks for working on this task!</h4>
+<form id="mturk_form" method="post" action="{{turk_submit_url}}/externalSubmit">
+    <input type="hidden" name="user_id" id="user_id" />
+    <input type="hidden" name="assignmentId" value="{{assignmentId}}" />
+    <textarea name="feedback" rows=10 cols=60 placeholder="Enter any feedback you have about the task here"></textarea>
+    <br /><br />
+    <button class="btn btn-success" type="submit" value="Submit">Finish and Submit HIT</button>
+</form>
